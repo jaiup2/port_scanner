@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+host=sys.argv[1:]
+host1 = ("".join(host[0]))
+host1 = host1.split("-")
+print(host)
+print(host1)
+try:
+  host[1]
+  print("Available")
+except Exception:
+  print("Not Available")
+  pass
+print(working)
