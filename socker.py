@@ -13,7 +13,7 @@ def ips(start, end):
 		a.append(host)
 		host = a
 		print(host)
-		print(a)
+#		print(a)
 #ips('192.168.74.1', '192.168.74.5')
 
 host1 = ("".join(host[0]))
@@ -28,12 +28,30 @@ except Exception:
 	host = host1
 	try:
 		host[1]
-		ips(host[0],'192.168.93.140')
+		rolo = host
+		pop1= rolo.pop(1)
+		print(rolo)
+		print(pop1)
+		rolo = "".join(rolo)
+		rolo = rolo.split(".")
+		pop2 = rolo.pop(3)
+		print(pop2)
+		print(rolo)
+		r1 = int(pop2) + int(pop1)
+		r1 = str(r1)
+		print(r1)
+		rolo.insert(3,r1)
+		rolo = ".".join(rolo)
+		rolo = [rolo]
+		print(rolo)
+
+		ips(host[0],rolo[0])
+		host = a
 	except Exception:
 		pass
 print("working")
 print(host)
-
+#print(a)
 #name=socket.gethostbyname("{}".format(host))
 #for k in host:
 #	print(k)
